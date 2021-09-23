@@ -15,14 +15,14 @@ using namespace std;
 //Global Constants
 
 //Function prototypes
-void fillVec(SimpleVector<unsigned int> &);
-void prntVec(SimpleVector<unsigned int> &,int);
+void fillVec(SimpleVector<char> &);
+void prntVec(SimpleVector<char> &,int);
 
 //Execution Begins Here
 int main(int argc, char** argv) {
     //Declare Variables
-    unsigned int size=200;
-    SimpleVector<unsigned int> sv(size);
+    char size=100;
+    SimpleVector<char> sv(size);
     
     //Fill the Vector
     fillVec(sv);
@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
     prntVec(sv,10);
     
     //Copy the Vector
-    SimpleVector<unsigned int> copysv(sv);
+    SimpleVector<char> copysv(sv);
     
     //Print the Vector
     prntVec(copysv,10);
@@ -39,7 +39,7 @@ int main(int argc, char** argv) {
     return 0;
 }
 
-void prntVec(SimpleVector<unsigned int> &sv,int perLine){
+void prntVec(SimpleVector<char> &sv,int perLine){
     cout<<endl;
     for(int i=0;i<sv.size();i++){
         cout<<sv[i]<<" ";
@@ -48,7 +48,7 @@ void prntVec(SimpleVector<unsigned int> &sv,int perLine){
     cout<<endl;
 }
 
-void fillVec(SimpleVector<unsigned int> &sv){
+void fillVec(SimpleVector<char> &sv){
     for(int i=0;i<sv.size();i++){
         sv[i]=rand()%26+65;
     }
